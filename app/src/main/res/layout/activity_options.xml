@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FDF6F6"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -20,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/options_main_msg"
+        android:background="#FBDDDB"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="80dp"
@@ -34,6 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/options_view_schedule_btn"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:background="#FBDDDB"
         android:layout_marginEnd="30dp"
         app:layout_constraintBottom_toTopOf="@+id/options_edit_services_btn"
         android:text="Edit Schedule"
@@ -44,6 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/options_edit_schedule_btn"
+        android:background="#FBDDDB"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
@@ -56,6 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/options_edit_services_btn"
+        android:background="#FBDDDB"
         android:layout_marginStart="30dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="30dp"
@@ -68,6 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/options_save_changes_btn"
+        android:background="#FBDDDB"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
