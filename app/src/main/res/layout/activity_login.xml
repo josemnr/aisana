@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/login_main_title_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:textSize="90dp"
+        android:text="aisana"
+        android:gravity="center"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/login_main_subtitle_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/login_main_title_name"
+        android:textSize="30dp"
+        android:text="Urban Beauty &amp; Spa"
+        android:gravity="center"
+        />
+
+    <android.inputmethodservice.ExtractEditText
+        android:id="@+id/login_userName_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/login_main_subtitle_name"
+        android:text="Username..."
+        />
+
+    <android.inputmethodservice.ExtractEditText
+        android:id="@+id/login_password_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/login_userName_et"
+        android:text="Username..."
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/login_password_et"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/login_bottom_caption"
+        android:text="Sign in"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/login_bottom_caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/login_sign_in_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="15dp"
+        android:text="If you don't have an account, sign up here"
+        android:gravity="center"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
