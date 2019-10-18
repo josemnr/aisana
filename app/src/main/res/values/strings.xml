@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Proyecto_moviles</string>
+    <string name="back_button">Regresar</string>
+    <string name="doubts_Clarifications">Dudas o aclaraciones llamar al (33)47897954</string>
+    <string name="cancelation_announcement">Cancelaciones 24 horas antes</string>
+    <string name="confirmation_announcement">Su cita ha quedado confirmada</string>
 </resources>
