@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Elija la hora a la que quiere su cita "
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@id/time_picker_tp"
         app:layout_constraintTop_toTopOf="parent"
