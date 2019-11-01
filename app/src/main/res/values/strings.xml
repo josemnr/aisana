@@ -4,4 +4,10 @@
     <string name="doubts_Clarifications">Dudas o aclaraciones llamar al (33)47897954</string>
     <string name="cancelation_announcement">Cancelaciones 24 horas antes</string>
     <string name="confirmation_announcement">Su cita ha quedado confirmada</string>
+    <string name="done_button">Done</string>
+    <string name="addService_button">Add Service</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <!-- Change the following strings as required -->
+    <string name="back4app_app_id">3AV4HR9mLK7n1H09OVh3lXXSe0eOLIaVL0Xuxang</string>
+    <string name="back4app_client_key">I15LbIn36Zbzwq0yfgVwYz9rKNQHirBdaAWJQtuT</string>
 </resources>
