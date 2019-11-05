@@ -17,7 +17,7 @@
         app:layout_constraintBottom_toTopOf="@+id/edit_service_name_et"
         />
 
-    <android.inputmethodservice.ExtractEditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_service_name_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
         android:text="Service Name"
         />
 
-    <android.inputmethodservice.ExtractEditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_service_start_time_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
         android:text="Available Start Time:"
         />
 
-    <android.inputmethodservice.ExtractEditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_service_end_time_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
         android:text="Available End Time:"
         />
 
-    <android.inputmethodservice.ExtractEditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edit_service_description_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

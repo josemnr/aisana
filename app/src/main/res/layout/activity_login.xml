@@ -16,7 +16,7 @@
         android:background="@drawable/industry_logo"
         />
 
-    <android.inputmethodservice.ExtractEditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/login_userName_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
         android:text="Username..."
         />
 
-    <android.inputmethodservice.ExtractEditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/login_password_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

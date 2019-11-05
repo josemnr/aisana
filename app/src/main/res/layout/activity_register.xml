@@ -5,7 +5,7 @@
     android:background="#FDF6F6"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <android.inputmethodservice.ExtractEditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/register_email_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         android:text="Email..."
         />
 
-    <android.inputmethodservice.ExtractEditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/register_userName_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
         android:text="Username..."
         />
 
-    <android.inputmethodservice.ExtractEditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/register_password_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
         android:text="Password..."
         />
 
-    <android.inputmethodservice.ExtractEditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/register_confirm_password_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

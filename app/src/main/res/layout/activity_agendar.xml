@@ -16,7 +16,7 @@
         android:layout_marginLeft="30dp"
         />
 
-    <android.inputmethodservice.ExtractEditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/Sevicio_Et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
         android:text="Servicio..."
         />
 
-    <android.inputmethodservice.ExtractEditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/estilista_Et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
         android:text="Estilista..."
         />
 
-    <android.inputmethodservice.ExtractEditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/Fecha_Et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
         android:text="Fecha..."
         />
 
-    <android.inputmethodservice.ExtractEditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/Hora_Et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,8 +59,6 @@
         app:layout_constraintTop_toBottomOf="@+id/Fecha_Et"
         android:text="Fecha..."
         />
-
-
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_sign_in_button"
