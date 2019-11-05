@@ -36,7 +36,7 @@ class Activity_Login : AppCompatActivity() {
                     if (error == null) {
                         //saveSessionToken(parseUser.sessionToken)
                         startActivity<ActivityMain>()
-                    }else{
+                    } else {
                         Toast.makeText(this, "Login error", Toast.LENGTH_LONG).show()
                     }
                 }
@@ -47,6 +47,7 @@ class Activity_Login : AppCompatActivity() {
         }*/ //////POSSIBLE FUNCTION TO IMPLEMENT IN THE FUTURE
     }
 
+
     //////POSSIBLE FUNCTION TO IMPLEMENT IN THE FUTURE
     /*
     fun saveSessionToken(sessionToken: String) {
@@ -54,5 +55,5 @@ class Activity_Login : AppCompatActivity() {
         val editor = sharedPreferences.edit()
         editor.putString(SESSION_ID_KEY, sessionToken)
         editor.apply()
-    }/*
+    }*/
 }
