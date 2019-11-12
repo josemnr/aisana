@@ -9,10 +9,11 @@ import android.widget.EditText
 import android.widget.Toast
 import com.parse.ParseException
 import com.parse.ParseUser
+import com.parse.SignUpCallback
 import org.jetbrains.anko.getStackTraceString
 
 
-class ActivityRegister : AppCompatActivity() {
+class ActivityRegister : AppCompatActivity(){
 
     private lateinit var mRegister: Button
     private lateinit var mUserName: EditText
@@ -37,23 +38,19 @@ class ActivityRegister : AppCompatActivity() {
 
             val user = ParseUser()
 
-            user.username = mUserName.text.toString();
-            user.setPassword(mPassword.text.toString());
+            user.username = mUserName.text.toString()
+            user.setPassword(mPassword.text.toString())
 
-            user.signUpInBackground {
-                @Override fun done(e: ParseException) {
-                    if (e == null) {
-                        startActivity<ActivityMain>()
-                    } else {
-                        ParseUser.logOut();
-                        Toast.makeText(this, e.getStackTraceString(), Toast.LENGTH_LONG).show()
-                    }
+            user.signUpInBackground{e ->
+                if (e != null) {
+                    startActivity<ActivityMain>()
+                } else {
+                    ParseUser.logOut()
+                    Toast.makeText(this, "User Register Error", Toast.LENGTH_LONG).show()
                 }
             }
-
         }
     }
-
     //////POSSIBLE FUNCTION TO IMPLEMENT IN THE FUTURE
     /*
     fun saveSessionToken(sessionToken: String) {
