@@ -11,7 +11,7 @@ import android.content.Context
 import android.widget.EditText
 import android.widget.Toast
 
-class Activity_Login : AppCompatActivity() {
+class ActivityLogin : AppCompatActivity() {
 
     private lateinit var mLogin: Button
     private lateinit var mUserName: EditText
