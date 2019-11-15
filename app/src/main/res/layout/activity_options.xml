@@ -49,30 +49,17 @@
         app:layout_constraintTop_toBottomOf="@+id/options_edit_schedule_btn"
         android:background="#FBDDDB"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/options_save_changes_btn"
-        android:text="Edit Services"
-        />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/options_save_changes_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/options_edit_services_btn"
-        android:background="#FBDDDB"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/login_bottom_caption"
-        android:text="Save Changes"
+        app:layout_constraintBottom_toTopOf="@+id/options_change_user"
+        android:text="Edit Services"
         />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/options_change_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/options_save_changes_btn"
+        app:layout_constraintTop_toBottomOf="@+id/options_edit_services_btn"
         android:background="#FBDDDB"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
