@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import com.parse.ParseUser
 import org.jetbrains.anko.find
 import org.jetbrains.anko.startActivity
 import java.nio.file.Files.find
@@ -44,7 +45,8 @@ class ActivityMain : AppCompatActivity(), View.OnClickListener {
                 //startActivity<ActivityEditServices>()
             }
             R.id.options_change_user -> {
-                //IMPLEMENT PARSE LOG-OUT CODE HERE
+                ParseUser.getCurrentUser()
+                ParseUser.logOut()
                 startActivity<ActivityLogin>()
             }
         }
