@@ -2,9 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.proyecto_moviles">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -13,15 +10,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityRegister"></activity>
-        <activity android:name=".ActivityLogin">
+
+        <activity android:name=".activities.ActivityLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityMain">
-        </activity>
+
+        <activity android:name=".activities.ActivityProfile"></activity>
+
+        <activity android:name=".activities.ActivityRegister"></activity>
+
+        <activity android:name=".activities.ActivityMain"></activity>
 
         <meta-data
             android:name="com.parse.SERVER_URL"
@@ -33,4 +34,8 @@
             android:name="com.parse.CLIENT_KEY"
             android:value="@string/back4app_client_key" />
     </application>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
 </manifest>
