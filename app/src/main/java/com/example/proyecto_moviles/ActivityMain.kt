@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import org.jetbrains.anko.find
+import org.jetbrains.anko.startActivity
 import java.nio.file.Files.find
 
 class ActivityMain : AppCompatActivity(), View.OnClickListener {
@@ -19,10 +20,10 @@ class ActivityMain : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_options)
 
-        mViewSchedule = find(R.id.options_view_schedule_btn)
-        mEditSchedule = find(R.id.options_edit_schedule_btn)
-        mEditServices = find(R.id.options_edit_services_btn)
-        mChangeUser = find(R.id.options_change_user)
+        mViewSchedule = findViewById(R.id.options_view_schedule_btn)
+        mEditSchedule = findViewById(R.id.options_edit_schedule_btn)
+        mEditServices = findViewById(R.id.options_edit_services_btn)
+        mChangeUser = findViewById(R.id.options_change_user)
 
         mViewSchedule.setOnClickListener(this)
         mEditSchedule.setOnClickListener(this)
@@ -31,7 +32,21 @@ class ActivityMain : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    override fun onClick(p0: View?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun onClick(item: View?) {
+        when(item?.id) {
+            R.id.options_view_schedule_btn -> {
+                //startActivity<ActivityViewSchedule>()
+            }
+            R.id.options_edit_schedule_btn -> {
+                //startActivity<ActivityEditSchedule>()
+            }
+            R.id.options_edit_services_btn -> {
+                //startActivity<ActivityEditServices>()
+            }
+            R.id.options_change_user -> {
+                //IMPLEMENT PARSE LOG-OUT CODE HERE
+                startActivity<ActivityLogin>()
+            }
+        }
     }
 }
