@@ -25,7 +25,7 @@ class ActivityLogin : AppCompatActivity() {
         mUserName = find(R.id.login_userName_et)
         mPassword = find(R.id.login_password_et)
 
-/*
+
         mLogin.setOnClickListener {
 
             ParseUser
@@ -40,7 +40,7 @@ class ActivityLogin : AppCompatActivity() {
                         Toast.makeText(this, "Login error", Toast.LENGTH_LONG).show()
                     }
                 }
-        }*/
+        }
 
         /*find<TextView>(R.id.activity_login_tv_forgot_action).setOnClickListener {
             startActivity<ActivityRestorePassword>()
