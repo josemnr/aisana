@@ -9,10 +9,11 @@
         android:id="@+id/services_RecyclerView"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/AddService_button_activityServices"
         >
 
     </androidx.recyclerview.widget.RecyclerView>
@@ -25,10 +26,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="500dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintTop_toBottomOf="@+id/services_RecyclerView"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/Done_button_activityServices"
         />
 
