@@ -42,7 +42,7 @@ class ActivityMain : AppCompatActivity(), View.OnClickListener {
                 //startActivity<ActivityEditSchedule>()
             }
             R.id.options_edit_services_btn -> {
-                //startActivity<ActivityEditServices>()
+                startActivity<ActivityEditServices>()
             }
             R.id.options_change_user -> {
                 ParseUser.getCurrentUser()
