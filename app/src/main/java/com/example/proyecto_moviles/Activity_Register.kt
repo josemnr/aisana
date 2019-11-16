@@ -1,4 +1,4 @@
-package com.example.proyecto_moviles.activities
+package com.example.proyecto_moviles
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,8 +7,10 @@ import org.jetbrains.anko.find
 import org.jetbrains.anko.startActivity
 import android.widget.EditText
 import android.widget.Toast
-import com.example.proyecto_moviles.R
+import com.parse.ParseException
 import com.parse.ParseUser
+import com.parse.SignUpCallback
+import org.jetbrains.anko.getStackTraceString
 
 
 class ActivityRegister : AppCompatActivity(){

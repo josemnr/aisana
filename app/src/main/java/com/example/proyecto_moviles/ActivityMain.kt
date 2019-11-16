@@ -1,8 +1,7 @@
-package com.example.proyecto_moviles.activities
+package com.example.proyecto_moviles
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-<<<<<<< Updated upstream:app/src/main/java/com/example/proyecto_moviles/ActivityMain.kt
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -10,9 +9,6 @@ import com.parse.ParseUser
 import org.jetbrains.anko.find
 import org.jetbrains.anko.startActivity
 import java.nio.file.Files.find
-=======
-import com.example.proyecto_moviles.R
->>>>>>> Stashed changes:app/src/main/java/com/example/proyecto_moviles/activities/ActivityMain.kt
 
 class ActivityMain : AppCompatActivity(), View.OnClickListener {
 
