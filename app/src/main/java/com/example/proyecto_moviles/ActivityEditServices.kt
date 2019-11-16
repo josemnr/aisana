@@ -1,10 +1,12 @@
 package com.example.proyecto_moviles
 
+import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import org.jetbrains.anko.startActivity
 
 class ActivityEditServices : AppCompatActivity() {
 
@@ -22,6 +24,14 @@ class ActivityEditServices : AppCompatActivity() {
 
         recyclerView.adapter = AdapterService(getParseServices())
         recyclerView.layoutManager = LinearLayoutManager(this)
+
+        mAddService.setOnClickListener{
+            //startActivity<ActivityAddService>()
+        }
+
+        mDone.setOnClickListener{
+            startActivity<ActivityMain>()
+        }
     }
 
     fun getParseServices() : ArrayList<String> {
