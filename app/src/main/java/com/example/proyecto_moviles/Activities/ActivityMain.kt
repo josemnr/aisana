@@ -1,14 +1,12 @@
-package com.example.proyecto_moviles
+package com.example.proyecto_moviles.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.EditText
+import com.example.proyecto_moviles.R
 import com.parse.ParseUser
-import org.jetbrains.anko.find
 import org.jetbrains.anko.startActivity
-import java.nio.file.Files.find
 
 class ActivityMain : AppCompatActivity(), View.OnClickListener {
 
