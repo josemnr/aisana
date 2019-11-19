@@ -15,7 +15,6 @@ import com.parse.ParseUser
 import com.parse.SignUpCallback
 import org.jetbrains.anko.getStackTraceString
 
-
 class ActivityRegister : AppCompatActivity(){
 
     private lateinit var mRegister: Button

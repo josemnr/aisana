@@ -17,23 +17,10 @@
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/options_view_schedule_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/options_main_msg"
-        android:background="#FBDDDB"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="80dp"
-        app:layout_constraintBottom_toTopOf="@+id/options_edit_schedule_btn"
-        android:text="View Schedule"
-        />
-
-    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/options_edit_schedule_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/options_view_schedule_btn"
+        app:layout_constraintTop_toBottomOf="@+id/options_main_msg"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:background="#FBDDDB"
@@ -49,7 +36,6 @@
         app:layout_constraintTop_toBottomOf="@+id/options_edit_schedule_btn"
         android:background="#FBDDDB"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="100dp"
         android:layout_marginEnd="30dp"
         app:layout_constraintBottom_toTopOf="@+id/options_change_user"
         android:text="Edit Services"
