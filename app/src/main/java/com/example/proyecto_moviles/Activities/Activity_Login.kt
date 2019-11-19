@@ -1,15 +1,17 @@
-package com.example.proyecto_moviles
+package com.example.proyecto_moviles.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
 import org.jetbrains.anko.find
 import org.jetbrains.anko.startActivity
 import com.parse.ParseUser
 import android.content.Context
 import android.widget.EditText
 import android.widget.Toast
+import com.example.proyecto_moviles.R
+import com.iteso.mx.proyecto_moviles.SESSION_ID_KEY
+import com.iteso.mx.proyecto_moviles.SHARED_PREFERENCES
 
 class ActivityLogin : AppCompatActivity() {
 
@@ -34,7 +36,7 @@ class ActivityLogin : AppCompatActivity() {
                     mPassword.text.toString()
                 ) { parseUser, error ->
                     if (error == null) {
-                        //saveSessionToken(parseUser.sessionToken)
+                        saveSessionToken(parseUser.sessionToken)
                         startActivity<ActivityMain>()
                     } else {
                         Toast.makeText(this, "Login error", Toast.LENGTH_LONG).show()
@@ -47,13 +49,10 @@ class ActivityLogin : AppCompatActivity() {
         }*/ //////POSSIBLE FUNCTION TO IMPLEMENT IN THE FUTURE
     }
 
-
-    //////POSSIBLE FUNCTION TO IMPLEMENT IN THE FUTURE
-    /*
     fun saveSessionToken(sessionToken: String) {
         val sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putString(SESSION_ID_KEY, sessionToken)
         editor.apply()
-    }*/
+    }
 }

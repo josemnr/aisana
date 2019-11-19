@@ -1,5 +1,6 @@
-package com.example.proyecto_moviles
+package com.example.proyecto_moviles.Activities
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -7,11 +8,10 @@ import org.jetbrains.anko.find
 import org.jetbrains.anko.startActivity
 import android.widget.EditText
 import android.widget.Toast
-import com.parse.ParseException
+import com.example.proyecto_moviles.R
+import com.iteso.mx.proyecto_moviles.SESSION_ID_KEY
+import com.iteso.mx.proyecto_moviles.SHARED_PREFERENCES
 import com.parse.ParseUser
-import com.parse.SignUpCallback
-import org.jetbrains.anko.getStackTraceString
-
 
 class ActivityRegister : AppCompatActivity(){
 
@@ -45,18 +45,18 @@ class ActivityRegister : AppCompatActivity(){
                 if (e != null) {
                     startActivity<ActivityMain>()
                 } else {
+                    saveSessionToken(user.sessionToken)
                     ParseUser.logOut()
                     Toast.makeText(this, "User Register Error", Toast.LENGTH_LONG).show()
                 }
             }
         }
     }
-    //////POSSIBLE FUNCTION TO IMPLEMENT IN THE FUTURE
-    /*
+
     fun saveSessionToken(sessionToken: String) {
         val sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putString(SESSION_ID_KEY, sessionToken)
         editor.apply()
-    }*/
+    }
 }

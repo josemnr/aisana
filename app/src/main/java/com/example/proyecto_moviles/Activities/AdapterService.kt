@@ -1,11 +1,11 @@
-package com.example.proyecto_moviles
+package com.example.proyecto_moviles.Activities
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.View
-import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.proyecto_moviles.R
 
 class AdapterService (private val service_names: ArrayList<String>):RecyclerView.Adapter<NameViewHolder>(){
 
