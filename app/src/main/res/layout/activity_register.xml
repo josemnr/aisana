@@ -34,8 +34,9 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="30dp"
+        android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@+id/register_userName_et"
-        android:text="Password..."
+        android:hint="Password"
         />
 
     <androidx.appcompat.widget.AppCompatEditText
@@ -45,8 +46,9 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="30dp"
+        android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@+id/register_password_et"
-        android:text="Confirm password..."
+        android:hint="Confirm Password"
         />
 
     <androidx.appcompat.widget.AppCompatButton
