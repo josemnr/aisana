@@ -48,6 +48,11 @@ class ActivityEditServices : AppCompatActivity() {
         services.add("Service Name 2")
         services.add("Service Name 3")
         services.add("Service Name 4")
+        services.add("Service Name 5")
+        services.add("Service Name 6")
+        services.add("Service Name 7")
+        services.add("Service Name 8")
+
 
         return services
     }
