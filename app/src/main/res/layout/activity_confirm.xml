@@ -25,6 +25,10 @@
         android:layout_marginEnd="30dp"
         android:layout_marginTop="90dp"
         android:inputType="none"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         app:layout_constraintTop_toBottomOf="@+id/login_main_title_name"
         android:text="Servicio..."
         />
