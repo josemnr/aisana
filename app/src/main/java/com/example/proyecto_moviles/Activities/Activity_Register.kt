@@ -12,6 +12,7 @@ import com.example.proyecto_moviles.R
 import com.iteso.mx.proyecto_moviles.SESSION_ID_KEY
 import com.iteso.mx.proyecto_moviles.SHARED_PREFERENCES
 import com.parse.ParseUser
+import org.jetbrains.anko.toast
 
 class ActivityRegister : AppCompatActivity(){
 
@@ -32,7 +33,8 @@ class ActivityRegister : AppCompatActivity(){
         mRegister.setOnClickListener {
 
             if(mPassword.text.toString() != mPasswordConfirm.text.toString()){
-                mPasswordConfirm.text.replace(0,0,"Error, passwords not equal")
+                mPasswordConfirm.text.clear()
+                toast("Error, passwords fields do not match")
                 return@setOnClickListener
             }
 

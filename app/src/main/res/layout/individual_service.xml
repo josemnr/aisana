@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="20dp"
-    android:layout_margin="20dp"
+    android:padding="5dp"
+    android:layout_margin="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -15,7 +15,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textSize="30sp"
-        tools:text="Service Name 1"/>
+        tools:text="Service Name 1"
+        android:inputType="none"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
