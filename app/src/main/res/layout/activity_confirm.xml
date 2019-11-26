@@ -70,7 +70,7 @@
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/login_sign_in_button"
+        android:id="@+id/confirm_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/Hora_Et"
@@ -78,7 +78,7 @@
         android:background="#FBDDDB"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/login_bottom_caption"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:text="Confirmar"
         />
 
