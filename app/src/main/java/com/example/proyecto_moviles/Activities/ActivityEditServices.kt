@@ -44,14 +44,14 @@ class ActivityEditServices : AppCompatActivity() {
 
 
         val services = arrayListOf<String>()
-        services.add("Service Name 1")
-        services.add("Service Name 2")
-        services.add("Service Name 3")
-        services.add("Service Name 4")
-        services.add("Service Name 5")
-        services.add("Service Name 6")
-        services.add("Service Name 7")
-        services.add("Service Name 8")
+        services.add("Corte de Cabello")
+        services.add("Tinte de pelo")
+        services.add("Maquillaje express")
+        services.add("Flamboyage")
+        services.add("Retoques")
+        services.add("Peinado Formal")
+        services.add("Aplicacion Gelish")
+        services.add("Manicura")
 
 
         return services
