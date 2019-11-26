@@ -8,6 +8,7 @@ import org.jetbrains.anko.startActivity
 import com.parse.ParseUser
 import android.content.Context
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.example.proyecto_moviles.R
 import com.iteso.mx.proyecto_moviles.SESSION_ID_KEY
@@ -18,6 +19,7 @@ class ActivityLogin : AppCompatActivity() {
     private lateinit var mLogin: Button
     private lateinit var mUserName: EditText
     private lateinit var mPassword: EditText
+    private lateinit var mRegisterAlt: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +28,7 @@ class ActivityLogin : AppCompatActivity() {
         mLogin = find(R.id.login_sign_in_button)
         mUserName = find(R.id.login_userName_et)
         mPassword = find(R.id.login_password_et)
-
+        mRegisterAlt = find(R.id.login_bottom_caption)
 
         mLogin.setOnClickListener {
 
@@ -46,6 +48,10 @@ class ActivityLogin : AppCompatActivity() {
                         Toast.makeText(this, "Login error", Toast.LENGTH_LONG).show()
                     }
                 }
+        }
+
+        mRegisterAlt.setOnClickListener{
+            startActivity<ActivityRegister>()
         }
 
         /*find<TextView>(R.id.activity_login_tv_forgot_action).setOnClickListener {
