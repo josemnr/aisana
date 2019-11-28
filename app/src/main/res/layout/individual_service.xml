@@ -17,7 +17,6 @@
         android:textSize="30sp"
         tools:text="Service Name 1"
         android:inputType="none"
-        android:clickable="false"
         android:cursorVisible="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
