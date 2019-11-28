@@ -27,7 +27,7 @@ class ActivityEditServices : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         mAddService.setOnClickListener{
-            //startActivity<ActivityAddService>()
+            startActivity<ActivityNewService>()
         }
 
         mDone.setOnClickListener{

@@ -10,7 +10,7 @@ import com.example.proyecto_moviles.R
 import com.parse.ParseObject
 import org.jetbrains.anko.startActivity
 
-class ActivitynewService: AppCompatActivity() {
+class ActivityNewService: AppCompatActivity() {
     private lateinit var nameEditText: EditText
     private lateinit var availableStartEditText: EditText
     private lateinit var availableEndEditText: EditText

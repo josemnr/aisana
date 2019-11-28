@@ -28,8 +28,8 @@ class ActivityServices : AppCompatActivity(){
         addServiceButton = findViewById(R.id.AddService_button_activityServices)
         doneButton = findViewById(R.id.Done_button_activityServices)
 
-        addServiceButton.setOnClickListener(){
-            startActivity<ActivitynewService>()
+        addServiceButton.setOnClickListener{
+            startActivity<ActivityNewService>()
         }
 
         doneButton.setOnClickListener(){
