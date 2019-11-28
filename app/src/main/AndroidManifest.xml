@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:name=".App"
@@ -13,7 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.ActivityConfirm"></activity>
+        <activity android:name=".Activities.ActivityAgendar"></activity>
+        <activity android:name=".Activities.ActivityServices" />
+        <activity android:name=".Activities.ActivityNewService" />
+        <activity android:name=".Activities.ActivitySchedule" />
+        <activity android:name=".Activities.ActivityProfile" />
+        <activity android:name=".Activities.ActivityConfirm" />
         <activity android:name=".Activities.ActivityEditServices" />
         <activity android:name=".Activities.ActivityRegister" />
         <activity android:name=".Activities.ActivityLogin">

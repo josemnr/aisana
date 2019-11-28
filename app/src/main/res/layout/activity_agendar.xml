@@ -47,6 +47,10 @@
         android:layout_marginEnd="30dp"
         android:layout_marginTop="40dp"
         app:layout_constraintTop_toBottomOf="@+id/estilista_Et"
+        android:inputType="none"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:text="Fecha..."
         />
 
@@ -57,12 +61,16 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="40dp"
+        android:inputType="none"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         app:layout_constraintTop_toBottomOf="@+id/Fecha_Et"
         android:text="Fecha..."
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/login_sign_in_button"
+        android:id="@+id/agendar_confirm_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/Hora_Et"

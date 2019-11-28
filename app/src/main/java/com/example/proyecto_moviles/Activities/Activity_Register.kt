@@ -45,7 +45,7 @@ class ActivityRegister : AppCompatActivity(){
 
             user.signUpInBackground{e ->
                 if (e != null) {
-                    startActivity<ActivityMain>()
+                    startActivity<ActivityLogin>()
                 } else {
                     saveSessionToken(user.sessionToken)
                     ParseUser.logOut()

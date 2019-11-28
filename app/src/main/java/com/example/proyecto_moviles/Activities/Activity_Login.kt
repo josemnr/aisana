@@ -40,10 +40,16 @@ class ActivityLogin : AppCompatActivity() {
                     if (error == null) {
                         saveSessionToken(parseUser.sessionToken)
 
+                        //TODO parse check if admin here
+
                         //check if admin to change activity
-                        startActivity<ActivityMain>()
+                        if(mUserName.text.toString() == "admin"){
+                            startActivity<ActivityMain>()
+                        }
                         //if normal user
-                        //startActivity<ActivityProfile>()
+                        else{
+                            startActivity<ActivityProfile>()
+                        }
                     } else {
                         Toast.makeText(this, "Login error", Toast.LENGTH_LONG).show()
                     }

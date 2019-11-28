@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import com.example.proyecto_moviles.R
 import com.parse.ParseUser
 import org.jetbrains.anko.startActivity
@@ -31,7 +32,7 @@ class ActivityMain : AppCompatActivity(), View.OnClickListener {
     override fun onClick(item: View?) {
         when(item?.id) {
             R.id.options_edit_schedule_btn -> {
-                //startActivity<ActivityEditSchedule>()
+                startActivity<ActivitySchedule>()
             }
             R.id.options_edit_services_btn -> {
                 startActivity<ActivityEditServices>()
@@ -39,6 +40,7 @@ class ActivityMain : AppCompatActivity(), View.OnClickListener {
             R.id.options_change_user -> {
                 ParseUser.getCurrentUser()
                 ParseUser.logOut()
+                Toast.makeText(this, "Se ha cerrado tu sesiòn", Toast.LENGTH_LONG).show()
                 startActivity<ActivityLogin>()
             }
         }
