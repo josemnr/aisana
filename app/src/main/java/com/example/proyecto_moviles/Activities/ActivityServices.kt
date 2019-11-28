@@ -36,7 +36,6 @@ class ActivityServices : AppCompatActivity(){
             startActivity<ActivityMain>()
         }
 
-
         /********************************************************************
          * IMPLEMENT PARSE FETCH SERVICES HERE
          * *******************************************************************

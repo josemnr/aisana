@@ -53,7 +53,7 @@ class ActivityNewService: AppCompatActivity() {
             descriptionEditText.text!!.clear()
         }
         cancelButton.setOnClickListener(){
-            startActivity<ActivityServices>()
+            startActivity<ActivityEditServices>()
         }
     }
 
