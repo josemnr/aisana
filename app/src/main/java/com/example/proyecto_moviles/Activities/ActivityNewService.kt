@@ -51,6 +51,8 @@ class ActivityNewService: AppCompatActivity() {
             availableStartEditText.text!!.clear()
             availableEndEditText.text!!.clear()
             descriptionEditText.text!!.clear()
+
+            startActivity<ActivityServices>()
         }
         cancelButton.setOnClickListener(){
             startActivity<ActivityEditServices>()
