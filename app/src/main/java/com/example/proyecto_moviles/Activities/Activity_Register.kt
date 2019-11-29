@@ -19,6 +19,7 @@ class ActivityRegister : AppCompatActivity(){
     private lateinit var mRegister: Button
     private lateinit var mUserName: EditText
     private lateinit var mPassword: EditText
+    private lateinit var mEmail: EditText
     private lateinit var mPasswordConfirm: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +29,7 @@ class ActivityRegister : AppCompatActivity(){
         mRegister = find(R.id.register_sign_in_button)
         mUserName = find(R.id.register_userName_et)
         mPassword = find(R.id.register_password_et)
+        mEmail = find(R.id.register_email_et)
         mPasswordConfirm = find(R.id.register_confirm_password_et)
 
         mRegister.setOnClickListener {
@@ -35,6 +37,11 @@ class ActivityRegister : AppCompatActivity(){
             if(mPassword.text.toString() != mPasswordConfirm.text.toString()){
                 mPasswordConfirm.text.clear()
                 toast("Error, passwords fields do not match")
+                return@setOnClickListener
+            }
+
+            if(mUserName.text.isEmpty() || mEmail.text.isEmpty() || mPassword.text.isEmpty()){
+                toast("Error, please fill all fields properly")
                 return@setOnClickListener
             }
 
