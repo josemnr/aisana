@@ -9,7 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.proyecto_moviles.Fragments.DatePickerFragment
 import com.example.proyecto_moviles.Fragments.TimePickerFragment
 import com.example.proyecto_moviles.R
-import org.jetbrains.anko.find
+import com.parse.ParseObject
+import com.parse.ParseUser
 import org.jetbrains.anko.startActivity
 
 class ActivityAgendar : AppCompatActivity(){
@@ -29,12 +30,20 @@ class ActivityAgendar : AppCompatActivity(){
         stylistEditText = findViewById(R.id.estilista_Et)
         dateEditText = findViewById(R.id.Fecha_Et)
         timeEditText = findViewById(R.id.Hora_Et)
-
         confirmButton = findViewById(R.id.agendar_confirm_button)
+
+        val user = ParseUser.getCurrentUser()
+        val userName = user.username.toString()
 
         confirmButton.setOnClickListener{
 
-            //TODO Parse set appointment here
+            val appointmentObject = ParseObject("Appointment")
+            appointmentObject.put("User", userName)
+            appointmentObject.put("Date", dateEditText.text.toString())
+            appointmentObject.put("Time", timeEditText.text.toString())
+            appointmentObject.put("Service", serviceNameEditText.text.toString())
+            appointmentObject.put("Stylist", stylistEditText.text.toString())
+            appointmentObject.saveInBackground()
 
             startActivity<ActivityProfile>()
         }
@@ -47,7 +56,6 @@ class ActivityAgendar : AppCompatActivity(){
             showTimePickerDialog()
         }
     }
-
 
     //////////////////////////////Inicializacion y show de los fragmentos//////////////////
     private fun showDatePickerDialog(){
@@ -65,7 +73,7 @@ class ActivityAgendar : AppCompatActivity(){
         val newFragment = TimePickerFragment.newInstance(TimePickerDialog.OnTimeSetListener{_, hour, min ->
             //0 son las 00hrs
             val selectTime = hour.toString() + ":" + min.toString()
-            dateEditText.setText(selectTime)
+            timeEditText.setText(selectTime)
 
         }, this)
 
