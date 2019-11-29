@@ -14,31 +14,36 @@ import org.jetbrains.anko.startActivity
 
 class ActivityAgendar : AppCompatActivity(){
     ///////////////////////Edit text del layout
-    private lateinit var etDate : EditText
-    private lateinit var etTime : EditText
-    private lateinit var confirmBtn : Button
+    private lateinit var serviceNameEditText : EditText
+    private lateinit var stylistEditText : EditText
+    private lateinit var dateEditText : EditText
+    private lateinit var timeEditText : EditText
+    private lateinit var confirmButton : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_agendar)
 
-        etDate = find(R.id.Fecha_Et)
-        etTime = find(R.id.Hora_Et)
-        confirmBtn = find(R.id.agendar_confirm_button)
+        serviceNameEditText = findViewById(R.id.Sevicio_Et)
+        stylistEditText = findViewById(R.id.estilista_Et)
+        dateEditText = findViewById(R.id.Fecha_Et)
+        timeEditText = findViewById(R.id.Hora_Et)
 
-        confirmBtn.setOnClickListener(){
+        confirmButton = findViewById(R.id.agendar_confirm_button)
+
+        confirmButton.setOnClickListener{
 
             //TODO Parse set appointment here
 
             startActivity<ActivityProfile>()
         }
 
-        etDate.setOnClickListener(){
+        dateEditText.setOnClickListener{
             showDatePickerDialog()
         }
 
-        etTime.setOnClickListener(){
+        timeEditText.setOnClickListener{
             showTimePickerDialog()
         }
     }
@@ -50,7 +55,7 @@ class ActivityAgendar : AppCompatActivity(){
 
             //Enero es 0
             val selectDate = day.toString() + "/" + (month+1) + "/" + year
-            etDate.setText(selectDate)
+            dateEditText.setText(selectDate)
 
         }, this)
         newFragment.show(supportFragmentManager, "datePicker")
@@ -60,7 +65,7 @@ class ActivityAgendar : AppCompatActivity(){
         val newFragment = TimePickerFragment.newInstance(TimePickerDialog.OnTimeSetListener{_, hour, min ->
             //0 son las 00hrs
             val selectTime = hour.toString() + ":" + min.toString()
-            etTime.setText(selectTime)
+            dateEditText.setText(selectTime)
 
         }, this)
 

@@ -38,13 +38,13 @@ class ActivityNewService: AppCompatActivity() {
 
         confirmButton.setOnClickListener(){
             val nameValue = nameEditText.text.toString()
-            val startValue = availableStartEditText
+            val startValue = availableStartEditText.text.toString()
             val endValue = availableEndEditText.text.toString()
             val descriptionValue = descriptionEditText.text.toString()
             val serviceObject = ParseObject("Service")
             serviceObject.put("NameOfService", nameValue)
-            //serviceObject.put("AvailableStart", startValue)
-            //serviceObject.put("AvailableEnd", endValue)
+            serviceObject.put("AvailableStart", startValue)
+            serviceObject.put("AvailableEnd", endValue)
             serviceObject.put("Description", descriptionValue)
             serviceObject.saveInBackground()
             nameEditText.text!!.clear()

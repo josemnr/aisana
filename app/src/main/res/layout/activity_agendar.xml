@@ -10,11 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:textSize="20dp"
         android:text="Datos"
-        android:gravity="left"
-        android:layout_marginLeft="30dp"
+        android:gravity="center"
         />
 
     <androidx.appcompat.widget.AppCompatEditText
@@ -24,8 +23,13 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="60dp"
+        android:clickable="true"
+        android:inputType="none"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         app:layout_constraintTop_toBottomOf="@+id/login_main_title_name"
-        android:text="Servicio..."
+        android:hint="Servicio:"
         />
 
     <androidx.appcompat.widget.AppCompatEditText
@@ -35,8 +39,13 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="40dp"
+        android:clickable="true"
+        android:inputType="none"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         app:layout_constraintTop_toBottomOf="@+id/Sevicio_Et"
-        android:text="Estilista..."
+        android:hint="Estilista:"
         />
 
     <androidx.appcompat.widget.AppCompatEditText
@@ -46,12 +55,13 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="40dp"
-        app:layout_constraintTop_toBottomOf="@+id/estilista_Et"
+        android:clickable="true"
         android:inputType="none"
         android:cursorVisible="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
-        android:text="Fecha..."
+        app:layout_constraintTop_toBottomOf="@+id/estilista_Et"
+        android:hint="Fecha:"
         />
 
     <androidx.appcompat.widget.AppCompatEditText
@@ -61,12 +71,13 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="40dp"
+        android:clickable="true"
         android:inputType="none"
         android:cursorVisible="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
         app:layout_constraintTop_toBottomOf="@+id/Fecha_Et"
-        android:text="Hora..."
+        android:hint="Hora:"
         />
 
     <androidx.appcompat.widget.AppCompatButton
