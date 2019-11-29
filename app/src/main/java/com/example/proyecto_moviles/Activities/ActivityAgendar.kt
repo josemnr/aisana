@@ -15,6 +15,7 @@ import com.example.proyecto_moviles.R
 import com.parse.ParseObject
 import com.parse.ParseUser
 import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
 
 class ActivityAgendar : AppCompatActivity(), PopupMenu.OnMenuItemClickListener {
 
@@ -48,6 +49,12 @@ class ActivityAgendar : AppCompatActivity(), PopupMenu.OnMenuItemClickListener {
         val userName = user.username.toString()
 
         confirmButton.setOnClickListener {
+
+            if(serviceNameEditText.text.isEmpty() || stylistEditText.text.isEmpty() || dateEditText.text.isEmpty() || timeEditText.text.isEmpty()){
+                toast("Error, please fill all fields properly")
+                return@setOnClickListener
+            }
+
             val appointmentObject = ParseObject("Appointment")
             appointmentObject.put("Service", serviceNameEditText.text.toString())
             appointmentObject.put("Stylist", stylistEditText.text.toString())
