@@ -30,19 +30,20 @@ class ActivityAgendar : AppCompatActivity(){
         dateEditText = findViewById(R.id.Fecha_Et)
         timeEditText = findViewById(R.id.Hora_Et)
 
+        confirmButton = findViewById(R.id.agendar_confirm_button)
 
-        confirmButton.setOnClickListener(){
+        confirmButton.setOnClickListener{
 
             //TODO Parse set appointment here
 
             startActivity<ActivityProfile>()
         }
 
-        dateEditText.setOnClickListener(){
+        dateEditText.setOnClickListener{
             showDatePickerDialog()
         }
 
-        timeEditText.setOnClickListener(){
+        timeEditText.setOnClickListener{
             showTimePickerDialog()
         }
     }
