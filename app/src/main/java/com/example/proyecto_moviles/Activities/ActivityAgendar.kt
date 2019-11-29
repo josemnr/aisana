@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.proyecto_moviles.Fragments.DatePickerFragment
 import com.example.proyecto_moviles.Fragments.TimePickerFragment
 import com.example.proyecto_moviles.R
+import com.parse.ParseObject
+import com.parse.ParseUser
 import org.jetbrains.anko.startActivity
 
 class ActivityAgendar : AppCompatActivity(), PopupMenu.OnMenuItemClickListener {
@@ -42,6 +44,20 @@ class ActivityAgendar : AppCompatActivity(), PopupMenu.OnMenuItemClickListener {
             showPopupStylists(this.stylistEditText)
         }
 
+        val user = ParseUser.getCurrentUser()
+        val userName = user.username.toString()
+
+        confirmButton.setOnClickListener {
+
+            val appointmentObject = ParseObject("Appointment")
+            appointmentObject.put("User", userName)
+            appointmentObject.put("Date", dateEditText.text.toString())
+            appointmentObject.put("Time", timeEditText.text.toString())
+            appointmentObject.put("Service", serviceNameEditText.text.toString())
+            appointmentObject.put("Stylist", stylistEditText.text.toString())
+            appointmentObject.saveInBackground()
+        }
+
         confirmButton.setOnClickListener{
             startActivity<ActivityProfile>()
         }
@@ -54,7 +70,6 @@ class ActivityAgendar : AppCompatActivity(), PopupMenu.OnMenuItemClickListener {
             showTimePickerDialog()
         }
     }
-
 
     //////////////////////////////Inicializacion y show de los fragmentos//////////////////
     private fun showDatePickerDialog(){
