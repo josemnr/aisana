@@ -48,17 +48,14 @@ class ActivityAgendar : AppCompatActivity(), PopupMenu.OnMenuItemClickListener {
         val userName = user.username.toString()
 
         confirmButton.setOnClickListener {
-
             val appointmentObject = ParseObject("Appointment")
+            appointmentObject.put("Service", serviceNameEditText.text.toString())
+            appointmentObject.put("Stylist", stylistEditText.text.toString())
             appointmentObject.put("User", userName)
             appointmentObject.put("Date", dateEditText.text.toString())
             appointmentObject.put("Time", timeEditText.text.toString())
-            appointmentObject.put("Service", serviceNameEditText.text.toString())
-            appointmentObject.put("Stylist", stylistEditText.text.toString())
             appointmentObject.saveInBackground()
-        }
 
-        confirmButton.setOnClickListener{
             startActivity<ActivityProfile>()
         }
 
@@ -109,7 +106,27 @@ class ActivityAgendar : AppCompatActivity(), PopupMenu.OnMenuItemClickListener {
     }
 
     override fun onMenuItemClick(view: MenuItem?): Boolean {
-        serviceNameEditText.setText(view!!.title)
+        when(view!!.itemId){
+            R.id.service1 -> putService(view)
+            R.id.service2 -> putService(view)
+            R.id.service3 -> putService(view)
+            R.id.service4 -> putService(view)
+            R.id.service5 -> putService(view)
+            R.id.service6 -> putService(view)
+            R.id.stylist1 -> putStylist(view)
+            R.id.stylist2 -> putStylist(view)
+            R.id.stylist3 -> putStylist(view)
+            R.id.stylist4 -> putStylist(view)
+            R.id.stylist5 -> putStylist(view)
+        }
         return true
+    }
+
+    private fun putService(view: MenuItem?) {
+        serviceNameEditText.setText(view!!.title)
+    }
+
+    private fun putStylist(view: MenuItem?) {
+        stylistEditText.setText(view!!.title)
     }
 }

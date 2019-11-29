@@ -3,21 +3,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/service1"
-        android:title="service1"
+        android:title="Corte de cabello"
         app:showAsAction="ifRoom"
         >
     </item>
 
     <item
         android:id="@+id/service2"
-        android:title="service2"
+        android:title="Balayage"
         app:showAsAction="ifRoom"
         >
     </item>
 
     <item
         android:id="@+id/service3"
-        android:title="service2"
+        android:title="Flamboyage"
+        app:showAsAction="ifRoom"
+        >
+    </item>
+
+    <item
+        android:id="@+id/service4"
+        android:title="Tinte"
+        app:showAsAction="ifRoom"
+        >
+    </item>
+
+    <item
+        android:id="@+id/service5"
+        android:title="Retoques"
+        app:showAsAction="ifRoom"
+        >
+    </item>
+
+    <item
+        android:id="@+id/service6"
+        android:title="Cubrimiento de canas"
         app:showAsAction="ifRoom"
         >
     </item>
