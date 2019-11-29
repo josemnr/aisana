@@ -10,6 +10,7 @@ import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.proyecto_moviles.R
 import org.jetbrains.anko.find
@@ -25,6 +26,7 @@ class ActivityProfile: AppCompatActivity() {
     private lateinit var btnAgendar: Button
     private lateinit var btnLogOut: Button
     private lateinit var ivProfilePic : ImageView
+    private lateinit var userNametv : TextView
 
     @RequiresApi(Build.VERSION_CODES.M)
     @TargetApi(Build.VERSION_CODES.M)
@@ -32,9 +34,14 @@ class ActivityProfile: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
+        val curr_user = ParseUser.getCurrentUser()
+
         btnAgendar = find(R.id.profile_agenda_btn)
         btnLogOut = find(R.id.profile_change_user_btn)
         ivProfilePic = find(R.id.profile_user_pic)
+        userNametv = find(R.id.profile_user_name)
+
+        userNametv.setText(curr_user.username.toString())
 
         btnAgendar.setOnClickListener {
             Toast.makeText(this, "Selecciona los datos que se piden", Toast.LENGTH_LONG).show()
