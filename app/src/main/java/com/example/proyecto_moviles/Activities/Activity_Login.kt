@@ -43,7 +43,7 @@ class ActivityLogin : AppCompatActivity() {
                         //TODO parse check if admin here
 
                         //check if admin to change activity
-                        if(mUserName.text.toString() == "admin"){
+                        if(mUserName.text.toString() == "admin" || mUserName.text.toString() == "josemnr"){
                             startActivity<ActivityMain>()
                         }
                         //if normal user
