@@ -30,6 +30,7 @@
         android:focusableInTouchMode="false"
         app:layout_constraintTop_toBottomOf="@+id/login_main_title_name"
         android:hint="Servicio:"
+        android:onClick="showPopupServices"
         />
 
     <androidx.appcompat.widget.AppCompatEditText
@@ -46,6 +47,7 @@
         android:focusableInTouchMode="false"
         app:layout_constraintTop_toBottomOf="@+id/Sevicio_Et"
         android:hint="Estilista:"
+        android:onClick="showPopupStylists"
         />
 
     <androidx.appcompat.widget.AppCompatEditText
