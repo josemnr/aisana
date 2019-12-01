@@ -55,7 +55,7 @@ class ActivityNewService: AppCompatActivity() {
             startActivity<ActivityServices>()
         }
         cancelButton.setOnClickListener(){
-            startActivity<ActivityEditServices>()
+            startActivity<ActivityServices>()
         }
     }
 
