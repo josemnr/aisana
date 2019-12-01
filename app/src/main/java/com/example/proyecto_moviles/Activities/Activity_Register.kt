@@ -16,11 +16,12 @@ import org.jetbrains.anko.toast
 
 class ActivityRegister : AppCompatActivity(){
 
-    private lateinit var mRegister: Button
     private lateinit var mUserName: EditText
     private lateinit var mPassword: EditText
     private lateinit var mEmail: EditText
     private lateinit var mPasswordConfirm: EditText
+    private lateinit var mRegister: Button
+    private lateinit var mCancel: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +32,7 @@ class ActivityRegister : AppCompatActivity(){
         mPassword = find(R.id.register_password_et)
         mEmail = find(R.id.register_email_et)
         mPasswordConfirm = find(R.id.register_confirm_password_et)
+        mCancel = find(R.id.cancel_button_activityServices)
 
         mRegister.setOnClickListener {
 
@@ -59,6 +61,10 @@ class ActivityRegister : AppCompatActivity(){
                     Toast.makeText(this, "User Register Error", Toast.LENGTH_LONG).show()
                 }
             }
+        }
+
+        mCancel.setOnClickListener(){
+            startActivity<ActivityLogin>()
         }
     }
 

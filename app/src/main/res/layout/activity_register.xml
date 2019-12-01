@@ -64,5 +64,17 @@
         android:text="Register"
         />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancel_button_activityServices"
+        android:background="#FBDDDB"
+        android:text="@string/cancel_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@+id/register_sign_in_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
