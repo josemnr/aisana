@@ -17,6 +17,7 @@ class ActivitySchedule: AppCompatActivity(){
     private lateinit var etClosingTime : EditText
     private lateinit var etBreakTime : EditText
     private lateinit var btnAgendar : Button
+    private lateinit var btnCancel : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +27,7 @@ class ActivitySchedule: AppCompatActivity(){
         etClosingTime = find(R.id.closing_time_editText)
         etBreakTime = find(R.id.break_time_editText)
         btnAgendar = find(R.id.confirm_button_activityEditSchedule)
+        btnCancel = find(R.id.cancel_button_activityEditSchedule)
 
         btnAgendar.setOnClickListener(){
             Toast.makeText(this, "Los datos se han actualizado", Toast.LENGTH_LONG).show()
@@ -47,6 +49,9 @@ class ActivitySchedule: AppCompatActivity(){
             showTBreakTime()
         }
 
+        btnCancel.setOnClickListener(){
+            startActivity<ActivityMain>()
+        }
     }
 
     private fun showTOpeningTime(){
