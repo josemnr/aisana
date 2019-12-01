@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.proyecto_moviles.Adapters.AdapterService
 import com.example.proyecto_moviles.R
 import com.parse.FindCallback
 import com.parse.ParseException
@@ -24,6 +25,7 @@ class ActivityServices : AppCompatActivity(){
 
         val recyclerView = findViewById<RecyclerView>(R.id.services_RecyclerView)
         var services = arrayListOf<String>()
+        var prices = arrayListOf<Int>()
 
         addServiceButton = findViewById(R.id.AddService_button_activityServices)
         doneButton = findViewById(R.id.Done_button_activityServices)
@@ -47,8 +49,10 @@ class ActivityServices : AppCompatActivity(){
 
                     for(service in objects?.indices!!){
                         services.add(objects.get(service).getString("NameOfService")!!)
+                        prices.add(objects.get(service).getInt("Price"))
                     }
-                    recyclerView.adapter = AdapterService(services)
+                    recyclerView.adapter =
+                        AdapterService(services, prices)
                     recyclerView.layoutManager = LinearLayoutManager(this@ActivityServices)
 
                 } else {

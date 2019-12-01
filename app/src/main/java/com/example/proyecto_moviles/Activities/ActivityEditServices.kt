@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.proyecto_moviles.Adapters.AdapterCita
+import com.example.proyecto_moviles.Adapters.AdapterService
 import com.example.proyecto_moviles.R
 import org.jetbrains.anko.startActivity
 
@@ -22,8 +24,7 @@ class ActivityEditServices : AppCompatActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.services_RecyclerView)
 
-        recyclerView.adapter =
-            AdapterService(getParseServices())
+        recyclerView.adapter = AdapterCita(getParseServices())
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         mAddService.setOnClickListener{
