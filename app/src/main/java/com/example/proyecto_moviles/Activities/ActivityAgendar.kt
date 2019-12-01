@@ -25,17 +25,22 @@ class ActivityAgendar : AppCompatActivity(), PopupMenu.OnMenuItemClickListener {
     private lateinit var dateEditText : EditText
     private lateinit var timeEditText : EditText
     private lateinit var confirmButton : Button
+    private lateinit var cancelButton : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_agendar)
 
+        val user = ParseUser.getCurrentUser()
+        val userName = user.username.toString()
+
         serviceNameEditText = findViewById(R.id.Sevicio_Et)
         stylistEditText = findViewById(R.id.estilista_Et)
         dateEditText = findViewById(R.id.Fecha_Et)
         timeEditText = findViewById(R.id.Hora_Et)
         confirmButton = findViewById(R.id.agendar_confirm_button)
+        cancelButton = findViewById(R.id.cancel_button_activityAgendar)
 
         serviceNameEditText.setOnClickListener(){
             showPopupServices(this.serviceNameEditText)
@@ -45,8 +50,13 @@ class ActivityAgendar : AppCompatActivity(), PopupMenu.OnMenuItemClickListener {
             showPopupStylists(this.stylistEditText)
         }
 
-        val user = ParseUser.getCurrentUser()
-        val userName = user.username.toString()
+        dateEditText.setOnClickListener{
+            showDatePickerDialog()
+        }
+
+        timeEditText.setOnClickListener{
+            showTimePickerDialog()
+        }
 
         confirmButton.setOnClickListener {
 
@@ -66,12 +76,8 @@ class ActivityAgendar : AppCompatActivity(), PopupMenu.OnMenuItemClickListener {
             startActivity<ActivityProfile>()
         }
 
-        dateEditText.setOnClickListener{
-            showDatePickerDialog()
-        }
-
-        timeEditText.setOnClickListener{
-            showTimePickerDialog()
+        cancelButton.setOnClickListener(){
+            startActivity<ActivityProfile>()
         }
     }
 

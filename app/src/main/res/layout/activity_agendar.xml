@@ -87,10 +87,23 @@
         android:background="#FBDDDB"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/cancel_button_activityAgendar"
         android:text="Agendar"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancel_button_activityAgendar"
+        android:background="#FBDDDB"
+        android:text="@string/cancel_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@+id/agendar_confirm_button"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
 
 
