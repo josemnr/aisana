@@ -6,6 +6,8 @@ import android.util.Log
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.proyecto_moviles.Adapters.AdapterCita
+import com.example.proyecto_moviles.Adapters.AdapterService
 import com.example.proyecto_moviles.R
 import com.parse.FindCallback
 import com.parse.ParseException
@@ -43,7 +45,8 @@ class ActivityCitas : AppCompatActivity(){
                     for(service in objects?.indices!!){
                         citas.add(objects.get(service).getString("Service")!!)
                     }
-                    recyclerView.adapter = AdapterService(citas)
+                    recyclerView.adapter =
+                        AdapterCita(citas)
                     recyclerView.layoutManager = LinearLayoutManager(this@ActivityCitas)
 
                 } else {
