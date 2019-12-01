@@ -6,14 +6,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/login_main_title_name"
+        android:id="@+id/Agendar_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="20dp"
-        android:textSize="20dp"
-        android:text="Datos"
+        android:textSize="40dp"
+        android:layout_marginTop="30dp"
+        android:text="Aappointment"
         android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Sevicio_Et"
         />
 
     <androidx.appcompat.widget.AppCompatEditText
@@ -22,13 +23,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:clickable="true"
         android:inputType="none"
         android:cursorVisible="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
-        app:layout_constraintTop_toBottomOf="@+id/login_main_title_name"
+        app:layout_constraintTop_toBottomOf="@+id/Agendar_title"
         android:hint="Servicio:"
         android:onClick="showPopupServices"
         />
@@ -105,6 +106,5 @@
         app:layout_constraintTop_toBottomOf="@+id/agendar_confirm_button"
         app:layout_constraintBottom_toBottomOf="parent"
         />
-
-
+    
 </androidx.constraintlayout.widget.ConstraintLayout>
