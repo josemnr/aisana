@@ -22,10 +22,10 @@ class ActivitySchedule: AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_schedule_owner)
 
-        etOpeningTime = find(R.id.opening_time_et)
-        etClosingTime = find(R.id.closing_time_et)
-        etBreakTime = find(R.id.break_time_et)
-        btnAgendar = find(R.id.btn_agendar)
+        etOpeningTime = find(R.id.opening_time_editText)
+        etClosingTime = find(R.id.closing_time_editText)
+        etBreakTime = find(R.id.break_time_editText)
+        btnAgendar = find(R.id.confirm_button_activityEditSchedule)
 
         btnAgendar.setOnClickListener(){
             Toast.makeText(this, "Los datos se han actualizado", Toast.LENGTH_LONG).show()
