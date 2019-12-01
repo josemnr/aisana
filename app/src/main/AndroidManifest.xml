@@ -14,6 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Activities.ActivityCitas" android:screenOrientation="portrait" />
         <activity android:name=".Activities.ActivityAgendar" android:screenOrientation="portrait" />
         <activity android:name=".Activities.ActivityServices" android:screenOrientation="portrait"/>
         <activity android:name=".Activities.ActivityNewService" android:screenOrientation="portrait"/>

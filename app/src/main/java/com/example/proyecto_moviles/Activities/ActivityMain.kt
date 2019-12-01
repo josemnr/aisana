@@ -13,6 +13,7 @@ class ActivityMain : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var mEditSchedule: Button
     private lateinit var mEditServices: Button
+    private lateinit var mViewAppointments: Button
     private lateinit var mChangeUser: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,10 +23,12 @@ class ActivityMain : AppCompatActivity(), View.OnClickListener {
         mEditSchedule = findViewById(R.id.options_edit_schedule_btn)
         mEditServices = findViewById(R.id.options_edit_services_btn)
         mChangeUser = findViewById(R.id.options_change_user)
+        mViewAppointments = findViewById(R.id.options_view_appointments_btn)
 
         mEditSchedule.setOnClickListener(this)
         mEditServices.setOnClickListener(this)
         mChangeUser.setOnClickListener(this)
+        mViewAppointments.setOnClickListener(this)
 
     }
 
@@ -36,6 +39,9 @@ class ActivityMain : AppCompatActivity(), View.OnClickListener {
             }
             R.id.options_edit_services_btn -> {
                 startActivity<ActivityServices>()
+            }
+            R.id.options_view_appointments_btn -> {
+                startActivity<ActivityCitas>()
             }
             R.id.options_change_user -> {
                 ParseUser.getCurrentUser()
