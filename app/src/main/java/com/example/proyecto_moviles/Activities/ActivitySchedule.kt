@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.proyecto_moviles.Fragments.TimePickerFragment
 import com.example.proyecto_moviles.R
+import com.parse.ParseObject
 import org.jetbrains.anko.find
 import org.jetbrains.anko.startActivity
 
@@ -30,10 +31,16 @@ class ActivitySchedule: AppCompatActivity(){
         btnCancel = find(R.id.cancel_button_activityEditSchedule)
 
         btnAgendar.setOnClickListener(){
+        val serviceObject = ParseObject("Schedule")
+        serviceObject.put("Opening_Time", etOpeningTime.text.toString())
+        serviceObject.put("Closing_Time", etClosingTime.text.toString())
+        serviceObject.put("Break_Time", etBreakTime.text.toString())
+        serviceObject.saveInBackground()
+        etOpeningTime.text!!.clear()
+        etClosingTime.text!!.clear()
+        etBreakTime.text!!.clear()
             Toast.makeText(this, "Los datos se han actualizado", Toast.LENGTH_LONG).show()
-
             //TODO implement ParseSaveSchedule
-
             startActivity<ActivityMain>()
         }
 
