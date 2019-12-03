@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/service_appointment_title_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"
+        tools:text="Service Name 1"
+        />
+
+    <View
+        android:id="@+id/verticalDivider"
+        android:layout_width="1dp"
+        android:layout_height="23dp"
+        android:background="#66AAAAAA"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintStart_toEndOf="@+id/service_appointment_title_name"
+        app:layout_constraintEnd_toStartOf="@+id/username_appointment"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/username_appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/verticalDivider"
+        app:layout_constraintEnd_toStartOf="@+id/verticalDivider2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"
+        tools:text="Username 1"
+        />
+
+    <View
+        android:id="@+id/verticalDivider2"
+        android:layout_width="1dp"
+        android:layout_height="23dp"
+        android:background="#66AAAAAA"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintStart_toEndOf="@+id/username_appointment"
+        app:layout_constraintEnd_toStartOf="@+id/date_appointment"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/date_appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/verticalDivider2"
+        app:layout_constraintEnd_toStartOf="@+id/verticalDivider3"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"
+        tools:text="Date 1"
+        />
+
+    <View
+        android:id="@+id/verticalDivider3"
+        android:layout_width="1dp"
+        android:layout_height="23dp"
+        android:background="#66AAAAAA"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintStart_toEndOf="@+id/date_appointment"
+        app:layout_constraintEnd_toStartOf="@+id/time_appointment"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/time_appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/verticalDivider3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"
+        tools:text="Time 1"
+        />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

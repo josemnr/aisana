@@ -25,6 +25,9 @@ class ActivityCitas : AppCompatActivity(){
 
         val recyclerView = findViewById<RecyclerView>(R.id.appointment_RecyclerView)
         var citas = arrayListOf<String>()
+        var usernames = arrayListOf<String>()
+        var dates = arrayListOf<String>()
+        var times = arrayListOf<String>()
 
 
         doneButton = findViewById(R.id.Done_button_activityCitas)
@@ -44,9 +47,12 @@ class ActivityCitas : AppCompatActivity(){
 
                     for(service in objects?.indices!!){
                         citas.add(objects.get(service).getString("Service")!!)
+                        usernames.add(objects.get(service).getString("User")!!)
+                        dates.add(objects.get(service).getString("Date")!!)
+                        times.add(objects.get(service).getString("Time")!!)
                     }
                     recyclerView.adapter =
-                        AdapterCita(citas)
+                        AdapterCita(citas, usernames, dates, times)
                     recyclerView.layoutManager = LinearLayoutManager(this@ActivityCitas)
 
                 } else {
