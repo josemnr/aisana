@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.View
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proyecto_moviles.R
 
@@ -12,6 +13,9 @@ class AdapterService (private val service_names: ArrayList<String>,private val s
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NameViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.individual_service, parent, false)
         return NameViewHolder(view)
+        view.setOnClickListener(){
+
+        }
     }
 
     override fun getItemCount(): Int = service_names.size
@@ -25,9 +29,14 @@ class NameViewHolder(view: View) : RecyclerView.ViewHolder(view){
 
     private val nameTitle: TextView = view.findViewById(R.id.item_title_name)
     private val priceTitle: TextView = view.findViewById(R.id.item_price)
+    private val itemCard: ConstraintLayout = view.findViewById(R.id.item_card)
 
     fun bind(service: String, price : Int) {
         nameTitle.text = service
         priceTitle.text = "$ $price"
+        itemCard.setOnClickListener{
+            
+        }
+
     }
 }
