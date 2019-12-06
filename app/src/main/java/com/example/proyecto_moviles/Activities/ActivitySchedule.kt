@@ -2,15 +2,26 @@ package com.example.proyecto_moviles.Activities
 
 import android.app.TimePickerDialog
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.proyecto_moviles.Fragments.TimePickerFragment
 import com.example.proyecto_moviles.R
+import com.parse.GetCallback
+import com.parse.ParseException
 import com.parse.ParseObject
+import com.parse.ParseQuery
 import org.jetbrains.anko.find
 import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
+import androidx.core.app.ComponentActivity
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+
 
 class ActivitySchedule: AppCompatActivity(){
 
@@ -30,18 +41,61 @@ class ActivitySchedule: AppCompatActivity(){
         btnAgendar = find(R.id.confirm_button_activityEditSchedule)
         btnCancel = find(R.id.cancel_button_activityEditSchedule)
 
+        val query = ParseQuery<ParseObject>("Schedule")
+        query.whereEqualTo("objectId", "Fqvbh31GbT")
+        query.getFirstInBackground { obj, e ->
+            if (e == null){
+                etOpeningTime.hint = "Opening time: " + obj["Opening_Time"] as String
+                etClosingTime.hint = "Closing time: " + obj["Closing_Time"] as String
+                etBreakTime.hint = "Break time: " + obj["Break_Time"] as String
+            }else{
+                error { e }
+            }
+        }
+
+
         btnAgendar.setOnClickListener(){
-        val serviceObject = ParseObject("Schedule")
-        serviceObject.put("Opening_Time", etOpeningTime.text.toString())
-        serviceObject.put("Closing_Time", etClosingTime.text.toString())
-        serviceObject.put("Break_Time", etBreakTime.text.toString())
-        serviceObject.saveInBackground()
-        etOpeningTime.text!!.clear()
-        etClosingTime.text!!.clear()
-        etBreakTime.text!!.clear()
+
+            val queryt = ParseQuery.getQuery<ParseObject>("Schedule")
+            queryt.getInBackground("Fqvbh31GbT") { schedule, e ->
+                if (e == null) {
+                    // Now let's update it with some new data. In this case, only cheatMode and score
+                    // will get sent to the Parse Cloud. playerName hasn't changed.
+                    if(etOpeningTime.text.toString() == "" && etClosingTime.text.toString() != "" && etBreakTime.text.toString() != ""){
+                        schedule.put("Closing_Time", etClosingTime.text.toString())
+                        schedule.put("Break_Time",etBreakTime.text.toString())
+                    }
+                    else if(etOpeningTime.text.toString() != "" && etClosingTime.text.toString() == "" && etBreakTime.text.toString() == ""){
+                        schedule.put("Opening_Time", etOpeningTime.text.toString())
+                    }
+                    else if(etOpeningTime.text.toString() != "" && etClosingTime.text.toString() == "" && etBreakTime.text.toString() != ""){
+                        schedule.put("Opening_Time", etOpeningTime.text.toString())
+                        schedule.put("Break_Time",etBreakTime.text.toString())
+                    }
+                    else if(etOpeningTime.text.toString() == "" && etClosingTime.text.toString() != "" && etBreakTime.text.toString() == ""){
+                        schedule.put("Closing_Time", etClosingTime.text.toString())
+                    }
+                    else if(etOpeningTime.text.toString() != "" && etClosingTime.text.toString() != "" && etBreakTime.text.toString() == ""){
+                        schedule.put("Opening_Time", etOpeningTime.text.toString())
+                        schedule.put("Closing_Time", etClosingTime.text.toString())
+                    }
+                    else if(etOpeningTime.text.toString() == "" && etClosingTime.text.toString() == "" && etBreakTime.text.toString() != ""){
+                        schedule.put("Break_Time",etBreakTime.text.toString())
+                    }
+                    else{
+                        schedule.put("Opening_Time", etOpeningTime.text.toString())
+                        schedule.put("Closing_Time", etClosingTime.text.toString())
+                        schedule.put("Break_Time", etBreakTime.text.toString())
+                    }
+                    schedule.saveInBackground()
+                } else {
+                    // Failed
+                }
+            }
+
             Toast.makeText(this, "Los datos se han actualizado", Toast.LENGTH_LONG).show()
-            //TODO implement ParseSaveSchedule
             startActivity<ActivityMain>()
+            //TODO implement ParseSaveSchedule
         }
 
         etOpeningTime.setOnClickListener(){

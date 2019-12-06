@@ -1,21 +1,22 @@
 package com.example.proyecto_moviles.Adapters
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.View
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.proyecto_moviles.Activities.Activity_appointment_description
 import com.example.proyecto_moviles.R
+import org.jetbrains.anko.startActivity
 
-class AdapterService (private val service_names: ArrayList<String>,private val services_prices: ArrayList<Int> ):RecyclerView.Adapter<NameViewHolder>(){
+class AdapterService (private val service_names: ArrayList<String>,private val services_prices: ArrayList<Int>):RecyclerView.Adapter<NameViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NameViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.individual_service, parent, false)
         return NameViewHolder(view)
-        view.setOnClickListener(){
-
-        }
     }
 
     override fun getItemCount(): Int = service_names.size
@@ -35,8 +36,7 @@ class NameViewHolder(view: View) : RecyclerView.ViewHolder(view){
         nameTitle.text = service
         priceTitle.text = "$ $price"
         itemCard.setOnClickListener{
-            
-        }
 
+        }
     }
 }
