@@ -11,11 +11,10 @@ import org.jetbrains.anko.toast
 
 class ActivityEditCita() : AppCompatActivity() {
 
-
-    val username: String? = intent.getStringExtra("Username")
-    val servicename: String? = intent.getStringExtra("Service")
-    val date: String? = intent.getStringExtra("Date")
-    val time: String? = intent.getStringExtra("Time")
+    private lateinit var username : String
+    private lateinit var servicename : String
+    private lateinit var date : String
+    private lateinit var time : String
 
     private lateinit var doneButton: Button
     private lateinit var cancelButton: Button
@@ -38,6 +37,12 @@ class ActivityEditCita() : AppCompatActivity() {
         serviceName = findViewById(R.id.edit_appointment_username_et)
         textDate = findViewById(R.id.edit_appointment_date_et)
         textTime = findViewById(R.id.edit_appointment_time_et)
+
+
+        username = intent.getStringExtra("Username")
+        servicename = intent.getStringExtra("Service")
+        date = intent.getStringExtra("Date")
+        time = intent.getStringExtra("Time")
 
         userName.text.clear()
         serviceName.text.clear()

@@ -32,7 +32,7 @@ class CitaViewHolder(view: View) : RecyclerView.ViewHolder(view){
     private val datesTextView: TextView = view.findViewById(R.id.date_appointment)
     private val timesTextView: TextView = view.findViewById(R.id.time_appointment)
 
-    val setClicable = view.setOnClickListener {
+    val setClickable = view.setOnClickListener {
         view.context.startActivity<ActivityEditCita> (
             "Username" to nameTextView.text.toString(),
             "Service" to usernameTextView.text.toString(),
