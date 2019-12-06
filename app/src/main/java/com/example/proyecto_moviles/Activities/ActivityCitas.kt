@@ -32,7 +32,7 @@ class ActivityCitas : AppCompatActivity(){
 
         doneButton = findViewById(R.id.Done_button_activityCitas)
 
-        doneButton.setOnClickListener(){
+        doneButton.setOnClickListener{
             startActivity<ActivityMain>()
         }
 
