@@ -15,16 +15,18 @@ class ActivityNewService: AppCompatActivity() {
     private lateinit var availableStartEditText: EditText
     private lateinit var availableEndEditText: EditText
     private lateinit var descriptionEditText: EditText
+    private lateinit var priceEditText: EditText
     private lateinit var confirmButton: Button
     private lateinit var cancelButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_edit_service)
+        setContentView(R.layout.activity_new_service)
 
         nameEditText = findViewById(R.id.edit_service_name_et)
         availableStartEditText = findViewById(R.id.edit_service_start_time_et)
         availableEndEditText = findViewById(R.id.edit_service_end_time_et)
+        priceEditText = findViewById(R.id.edit_service_price_et)
         descriptionEditText = findViewById(R.id.edit_service_description_et)
         confirmButton = findViewById(R.id.edit_service_confirm_button)
         cancelButton = findViewById(R.id.edit_service_cancel_button)
@@ -40,11 +42,13 @@ class ActivityNewService: AppCompatActivity() {
             val nameValue = nameEditText.text.toString()
             val startValue = availableStartEditText.text.toString()
             val endValue = availableEndEditText.text.toString()
+            val priceValue = priceEditText.text.toString().toInt()
             val descriptionValue = descriptionEditText.text.toString()
             val serviceObject = ParseObject("Service")
             serviceObject.put("NameOfService", nameValue)
             serviceObject.put("AvailableStart", startValue)
             serviceObject.put("AvailableEnd", endValue)
+            serviceObject.put("Price", priceValue)
             serviceObject.put("Description", descriptionValue)
             serviceObject.saveInBackground()
             nameEditText.text!!.clear()
